@@ -46,7 +46,7 @@ Resources:
     Properties:
       VpcId: !Ref MyVPC
       CidrBlock: "10.1.3.0/24"  # Private Subnet CIDR
-      AvailabilityZone: !Select [ 1, !GetAZs '' ]
+      AvailabilityZone: !Select [ 2, !GetAZs '' ]
       Tags:
         - Key: Name
           Value: Group5-PrivateSubnet-3
@@ -123,4 +123,5 @@ Outputs:
   InternetGatewayId:
     Description: "Internet Gateway ID"
     Value: !Ref MyInternetGateway
+
 
